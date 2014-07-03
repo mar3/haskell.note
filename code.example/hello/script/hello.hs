@@ -1,5 +1,5 @@
 #!/usr/local/bin/runghc
--- coding: utf-8 -*-
+-- coding: utf-8
 
 main :: IO()
 main = do
