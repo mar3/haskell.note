@@ -2,7 +2,6 @@
 
 main :: IO()
 main = do
-	putStrLn "<main> ### 開始 ###"
-	putStrLn "<main> Hello Real World!"
-	putStrLn "<main> --- 終了 ---"
+	putStr "Hello Real World!"
+	putStrLn ""
 
