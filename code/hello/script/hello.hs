@@ -1,4 +1,4 @@
-#!/usr/local/bin/runghc
+#!/usr/bin/env runghc
 -- coding: utf-8
 
 main :: IO()
