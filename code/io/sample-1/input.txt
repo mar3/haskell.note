@@ -1,0 +1,6 @@
+this is sample text
+real world haskell
+nec
+sony
+こんにちは
+Panasonic 
