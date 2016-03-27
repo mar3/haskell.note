@@ -6,7 +6,6 @@
 -- 階乗
 -- ============================================================================
 fact1 :: Integer -> Integer
-fact1 0 = 1
 fact1 n =
 	if n == 0
 	then 1
@@ -30,3 +29,4 @@ main = do
 	print $ fact1 3
 	print $ fact1 4
 	print $ fact1 5
+
