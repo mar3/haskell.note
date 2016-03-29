@@ -11,7 +11,6 @@ import Database.HDBC.MySQL
 
 main = do
 
-	-- 接続
 	my_connection <- connectMySQL
 		defaultMySQLConnectInfo {
 			mysqlHost = "localhost",
@@ -21,11 +20,8 @@ main = do
 			mysqlUnixSocket = "/var/run/mysqld/mysqld.sock"
 		}
 
-	-- ドライバや接続についての情報を表示します。
-	print $ hdbcDriverName my_connection
-	print $ hdbcClientVer my_connection
-	print $ dbTransactionSupport my_connection
+	my_tables <- getTables my_connection
+	print $ my_tables
 
-	-- 切断
 	disconnect my_connection
 

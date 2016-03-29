@@ -52,9 +52,6 @@ main = do
 	--CREATE TABLE TEST20160313(ID NVARCHAR(255) NOT NULL, NAME NVARCHAR(255), PRIMARY KEY(ID));
 	--executeMany my_statement [[]]
 
-	-- ========================================================================
-	-- 切断
-	-- ========================================================================
 	disconnect my_connection
 
 	putStrLn "Ok."
