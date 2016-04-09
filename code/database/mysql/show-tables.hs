@@ -13,7 +13,7 @@ main = do
 
 	my_connection <- connectMySQL
 		defaultMySQLConnectInfo {
-			mysqlHost = "localhost",
+			mysqlHost = "127.0.0.1",
 			mysqlDatabase = "HASKELL_HDBC_TEST",
 			mysqlUser = "root",
 			mysqlPassword = "",

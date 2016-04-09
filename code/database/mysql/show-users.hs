@@ -7,24 +7,27 @@
 
 import Database.HDBC
 import Database.HDBC.MySQL
-
+import Data.Maybe
 
 
 
 
 --convRow :: Maybe [SqlValue] -> String
---convRow [sqlId, sqlDesc] = do
---	show intid ++ ": " ++ desc
---	where
---		intid = (fromSql sqlId)::Integer
---		desc = case fromSql sqlDesc of
---			Just x -> x
---			Nothing -> "NULL"
+convRow [sqlId, sqlDesc] = do
+	show intid ++ ": " ++ desc
+	where
+		intid = (fromSql sqlId)::Integer
+		desc = case fromSql sqlDesc of
+			Just x -> x
+			Nothing -> "NULL"
 
 --convRow Nothing = "Nothing"
 
---convRow x = do
---	fail "Unexpected result: " ++ show x
+convRow x = do
+	fail "Unexpected result: " ++ show x
+
+--_print_rows stm -> do
+	--let row = fetchRowAL stm
 
 main = do
 
@@ -56,6 +59,8 @@ main = do
 	execute my_statement [toSql (1::Int)]
 	--row <- fetchRowAL my_statement
 	--row <- fetchRowMap my_statement
+
+	--_print_rows my_statement
 	row <- fetchRow my_statement
 	print $ row
 
