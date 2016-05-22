@@ -8,8 +8,8 @@ _what_is_this something = do
 	-- otherwise が存在しない場合、実行時エラーが発生します。
 	--                 "Non-exhaustive patterns in case"
 	case something of
-		"apple" -> "APPLE"
-		"orange" -> "ORANGE"
+		"apple" -> "( |`)"
+		"orange" -> "( ::)"
 		otherwise -> ""
 
 main :: IO ()
